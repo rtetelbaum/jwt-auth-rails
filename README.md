@@ -173,7 +173,7 @@ end
   => true
 ```
 
-![mind blown](https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif)
+<!-- ![mind blown](https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif) -->
 
 - We have no way of storing instances of `BCrypt::Password` in our database. Instead, we're storing users' password digests **[as strings][schema]**. If we were to build our own `User#authenticate` method using `BCrypt`, it might look something like this:
 
@@ -208,7 +208,7 @@ class User < ApplicationRecord
 end
 ```
 
-![salt bae](https://media.giphy.com/media/l4Jz3a8jO92crUlWM/giphy.gif)
+<!-- ![salt bae](https://media.giphy.com/media/l4Jz3a8jO92crUlWM/giphy.gif) -->
 
 #### End of BCrypt Tangent
 
@@ -289,7 +289,7 @@ fetch('http://localhost:3000/api/v1/users', {
 
 ## Make Sure You Can POST and Create a New User Before Proceeding
 
-![intermission](https://media.giphy.com/media/pcPs6v6fhE7Ru/giphy.gif)
+<!-- ![intermission](https://media.giphy.com/media/pcPs6v6fhE7Ru/giphy.gif) -->
 
 ---
 
@@ -453,7 +453,7 @@ JWT::DecodeError (Invalid segment encoding)
 
 - Instead of crashing our server, we simply return `nil` and keep trucking along.
 
-![keep trucking](https://media.giphy.com/media/3xb5V0fbxHXck/giphy.gif)
+<!-- ![keep trucking](https://media.giphy.com/media/3xb5V0fbxHXck/giphy.gif) -->
 
 ---
 
@@ -587,11 +587,11 @@ end
 
 - It wouldn't make sense to ask our users to be logged in before they create an account. This circular logic will make it **impossible** for users to authenticate into the app. How can a user create an account if our app asks them to be logged in or `authorized` to do so? Skipping the before action 'unlocks' this portion of our app.
 
-![omg](https://media.giphy.com/media/l1J9Jzcs9OHXa310k/giphy.gif)
+<!-- ![omg](https://media.giphy.com/media/l1J9Jzcs9OHXa310k/giphy.gif) -->
 
 - Try creating a new user again with either [postman](https://www.getpostman.com/apps) or fetch and confirm that your server successfully issues a token on signup.
 
-![sign me up gif](https://media.giphy.com/media/fSkMuhRxstDi5g5dwo/giphy.gif)
+<!-- ![sign me up gif](https://media.giphy.com/media/fSkMuhRxstDi5g5dwo/giphy.gif) -->
 
 ---
 
